@@ -1,0 +1,26 @@
+/* 基础样式，字体样式，浏览器默认样式 */
+/*  预定义的组件样式  */
+/* 可用的实用程序类，通过这些类快速构建界面 */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 去除数字输入框中的上下箭头（通常用于增减数值），
+使其看起来更像一个普通的文本输入框  */
+
+firefox input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+/* chrome和safari */
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
